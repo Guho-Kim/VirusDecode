@@ -7,6 +7,7 @@ import Analysis from './pages/analysis.js'
 import { React, useState, useEffect } from 'react';
 import historyIcon from './history.png';
 import editIcon from './edit.png';
+import LoginButtonComponent from './loginButtonComponent.js';
 
 function App() {
 
@@ -100,6 +101,7 @@ function App() {
                 className="d-inline-block align-top"
                 style={{ marginRight: '10px' }}
               />}VirusDecode</span>
+               
         </div>
         <Routes>
           <Route path='/' element={
@@ -109,6 +111,7 @@ function App() {
                 <p style={{ fontSize: '20px' }}>Decode the virus’s genetic code,<br />
                   analyze its mutations,<br />
                   and determine the vaccine sequence.</p>
+                  <LoginButtonComponent />
               </div>
               <button className="image-button" onClick={() => { handleNavigate('inputSeq') }}></button>
             </div>} />
